@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Rule Explained</title>
+  <meta name="description" content="An article explaining CSS rules, including selectors, properties, and values.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Rules Explained</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History of the Web & Browsers</a></li>
+        <li><a href="security.html">Security on the Web/Internet</a></li>
+        <li><a href="mobile-first.html">Mobile-First Development</a></li>
+        <li><a href="stats.html">Internet Stats</a></li>
+        <li><a href="css-rules.html">CSS Rules</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <section>
+        <h2>What is a CSS Rule?</h2>
+        <p>
+          A CSS rule defines how HTML elements should be displayed on a webpage. 
+          Each rule consists of a <strong>selector</strong> and a set of <strong>declarations</strong>. 
+          The selector determines which elements are affected, while the declarations specify the style changes.
+        </p>
+        <figure>
+          <img src="images/css/rules.png" alt="CSS Rule example diagram">
+          <figcaption>Structure of a CSS rule (Source: W3C, 2023)</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Basic Structure</h3>
+        <blockquote>
+          selector { property: value; }
+        </blockquote>
+        <p>
+          For example:
+        </p>
+        <pre>
+              p {
+                color: blue;
+                font-size: 16px;
+              }
+        </pre>
+        <p>
+          This CSS rule makes all <code>&lt;p&gt;</code> elements appear with blue text and a font size of 16 pixels (Mozilla, 2023).
+        </p>
+      </section>
+
+      <section>
+        <h3>Types of Selectors</h3>
+        <ol>
+          <li><strong>Element selectors</strong> - apply styles to a specific HTML element (e.g., <code>p</code>, <code>h1</code>).</li>
+          <li><strong>Class selectors</strong> - apply styles to elements with a specific class attribute (e.g., <code>.example</code>).</li>
+          <li><strong>ID selectors</strong> - apply styles to an element with a unique ID (e.g., <code>#header</code>).</li>
+          <li><strong>Universal selectors</strong> - apply styles to all elements (<code>*</code>).</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Importance of CSS Rules</h3>
+        <ul>
+          <li>They separate content (HTML) from presentation (CSS).</li>
+          <li>They allow for consistent design across multiple pages.</li>
+          <li>They improve maintainability and accessibility (W3C, 2023).</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>See <a href="references.html">References</a></p>
+    <p>Last updated: September 24, 2025</p>
+    <p>Some parts of this content were created with the assistance of AI tools.</p>
+  </footer>
+</body>
+</html>
