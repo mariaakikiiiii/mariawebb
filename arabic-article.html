@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>بحث عن الويب</title>
+</head>
+<body>
+<header>
+    <h1>بحث عن شبكة الويب (web)</h1>
+</header>
+  <main>
+    <section>
+      <h2>مقدمة</h2>
+      <p>تُعد شبكة الويب (World Wide Web) واحدة من أهم اختراعات العصر الحديث؛ إذ غيّرت طريقة الوصول إلى المعلومات، والتواصل، وبناء الخدمات الرقمية. في هذا البحث نستعرض تعريف الويب، مكوناته الأساسية، تطوره التاريخي، التقنيات المستخدمة في بنائه وتطويره، القضايا الأمنية، وبعض توجهاته المستقبلية.</p>
+    </section>
+
+    <section>
+      <h2>تعريف الويب</h2>
+      <p>الويب هو نظام موزع لمستندات وموارد مترابطة قابلة للوصول عبر شبكات الاتصالات باستخدام بروتوكولات موحدة مثل HTTP، ويعتمد على عناوين موحدة تُعرف بـ عناوين الموارد الموحدة (URL). المستعرضات (المتصفحات) هي بوابات المستخدمين لعرض صفحات الويب.</p>
+    </section>
+
+    <section>
+      <h2>تاريخ موجز</h2>
+      <p>ظهرت فكرة الويب في أواخر الثمانينيات على يد تيم برنرز-لي في مختبرات سيرن، وكانت البداية مع بروتوكول HTTP ولغة توصيف النص الفائق HTML ونظام العناوين URL. تطورت الويب خلال عقود إلى عدة مراحل: صفحات ثابتة بسيطة، صفحات ديناميكية، تطبيقات على جانب العميل، وصولاً إلى خدمات سحابية ومنصات تفاعلية معقدة.</p>
+    </section>
+
+    <section>
+      <h2>مكونات نظام الويب</h2>
+      <h3>العميل (Client)</h3>
+      <p>هو المتصفح الذي يطلب صفحات ويب ويعرضها للمستخدم. يتعامل العميل مع HTML وCSS وJavaScript لعرض وتفاعل المحتوى.</p>
+
+      <h3>الخادم (Server)</h3>
+      <p>هو الجهاز أو الخدمة التي تستضيف الملفات والواجهات البرمجية (APIs) وتعالج طلبات العملاء. يمكن أن يكون خادماً ماديًا أو خدمة سحابية.</p>
+
+      <p>بالإضافة إلى ذلك، هناك بروتوكولات (HTTP/HTTPS)، قواعد بيانات لتخزين المحتوى، وشبكات توصيل المحتوى (CDN) لتسريع التوزيع.</p>
+    </section>
+
+    <section>
+      <h2>تقنيات أساسية للويب</h2>
+      <ul>
+        <li>HTML: تُستخدم لبناء الهيكل العام للصفحة.</li>
+        <li>CSS: تُستخدم لتنسيق المظهر والتصميم.</li>
+        <li>JavaScript: لغة برمجة تُنفذ على جانب العميل لإضافة التفاعل.</li>
+        <li>HTTP/HTTPS: بروتوكولات نقل النصوص والموارد؛ HTTPS يضيف طبقة التشفير.</li>
+        <li>APIs وJSON: لتبادل البيانات بين الخادم والعميل.</li>
+        <li>WebAssembly: لزيادة أداء التطبيقات عبر تشغيل شيفرات قريبة من الآلة داخل المتصفح.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>تطوير الويب: اتجاهات وأدوار</h2>
+      <p>تضم عملية تطوير الويب تخصصات متعددة:</p>
+      <ul>
+        <li>مطور الواجهة الأمامية (Frontend): يبني واجهات المستخدم ويهتم بالتجربة البصرية والتفاعل.</li>
+        <li>مطور الخادم (Backend): يبني منطق التطبيق، قواعد البيانات، وواجهات الـ API.</li>
+        <li>مطور متكامل (Fullstack): يجمع بين الاثنين ويمتلك رؤية شاملة للتطبيق.</li>
+      </ul>
+      <p>أدوات شائعة: نظم التحكم بالإصدارات (Git)، أطر عمل واجهة أمامية (React, Vue, Angular)، أطر عمل للخادم (Node.js, Django, Ruby on Rails)، وخدمات جاهزة في السحابة (AWS, Azure, Google Cloud).</p>
+    </section>
+
+    <section>
+      <h2>أمن الويب</h2>
+      <p>أمن الويب من أهم التحديات. أمثلة على مخاطر شائعة:</p>
+      <ul>
+        <li>الهجمات عبر حقن SQL التي تستهدف قواعد البيانات.</li>
+        <li>البرمجة النصية عبر المواقع (XSS) التي تسمح بحقن شيفرات ضارة في صفحات الويب.</li>
+        <li>تزوير طلبات المواقع (CSRF) الذي يستغل ثقة الموقع بالمستخدم.</li>
+      </ul>
+      <p>ممارسات الحماية: استخدام HTTPS، التحقق من مدخلات المستخدم، إعداد رؤوس أمان صحيحة (CSP، HSTS)، وإدارة التحديثات والنسخ الاحتياطي.</p>
+    </section>
+
+    <section>
+      <h2>تطبيقات الويب</h2>
+      <p>تتنوع تطبيقات الويب بين: مواقع معلوماتية، متاجر إلكترونية، منصات تواصل اجتماعي، أنظمة إدارة محتوى، وتطبيقات ويب تقدّم وظائف معقدة مثل تحرير الوسائط أو الاجتماعات المرئية.</p>
+    </section>
+
+    <section>
+      <h2>تحديات ومشكلات</h2>
+      <ul>
+        <li>خصوصية البيانات وتوافقها مع القوانين المحلية والدولية.</li>
+        <li>تكاليف الاستضافة والأداء عند ازدياد أعداد المستخدمين.</li>
+        <li>التوافق بين متصفحات مختلفة وأحجام شاشات متعددة.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>اتجاهات مستقبلية</h2>
+      <ul>
+        <li>الويب القوي بالأداء (WebAssembly) لتشغيل تطبيقات متقدمة داخل المتصفح.</li>
+        <li>الويب اللامركزي (Web3) الذي يعتمد على سلاسل الكتل لتوزيع الملكية والبيانات.</li>
+        <li>تكامل الذكاء الاصطناعي داخل التطبيقات لتجارب مستخدم أكثر تخصيصًا.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>خاتمة</h2>
+      <p>الويب منصة حيوية ومتحولة باستمرار. فهم مبادئه وتقنياته الأساسية يساعد الباحثين والمطورين على بناء خدمات آمنة وفعالة تلبي احتياجات المجتمع الرقمي. تبقى التحديات القانونية والأمنية والخصوصية محاور يجب متابعتها بعناية أثناء تطوير الحلول.</p>
+    </section>
+
+    <section>
+      <h2>مراجع</h2>
+    <ol>
+      <li><a href="https://www.w3.org/" target="_blank">W3C — اتحاد الشبكة العالمية (World Wide Web Consortium)</a></li>
+      <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs — مستندات مطوري موزيلا</a></li>
+      <li><a href="https://webfoundation.org/about/sir-tim-berners-lee/" target="_blank">Tim Berners-Lee — مؤسس الويب</a></li>
+      <li><a href="https://owasp.org/" target="_blank">OWASP — مشروع أمان تطبيقات الويب</a></li>
+      <li><a href="https://httpwg.org/specs/" target="_blank">المواصفات الرسمية لبروتوكول HTTP</a></li>
+      <li><a href="https://html.spec.whatwg.org/" target="_blank">المواصفات الرسمية للغة HTML</a></li>
+      <li><a href="https://webassembly.org/" target="_blank">WebAssembly — الموقع الرسمي</a></li>
+      <li><a href="https://aws.amazon.com/" target="_blank">Amazon Web Services (AWS)</a></li>
+      <li><a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a></li>
+      <li><a href="https://cloud.google.com/" target="_blank">Google Cloud</a></li>
+      <li><a href="https://www.coursera.org/" target="_blank">Coursera — منصة تعليمية</a></li>
+      <li><a href="https://www.edx.org/" target="_blank">edX — منصة تعليمية</a></li>
+      <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp — لتعلم تطوير الويب مجانًا</a></li>
+    </ol>
+    </section>
+  </main>
+  <footer>
+    <nav>
+      <a href="../welcome.html">Welcome page</a> |
+      <a href="index.html">Home</a> | 
+      <a href="history.html">History</a> | 
+      <a href="security.html">Security</a> | 
+      <a href="mobile-first.html">Mobile-First</a> |
+      <a href="stats.html">Stats</a> |
+      <a href="css-rules.html">CSS Rules</a> | 
+    </nav>
+  </footer>
+</body>
+</html>
