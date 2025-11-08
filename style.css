@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* * Project: Web Project Welcome Page CSS 
+ * Theme: Light Mode with Modern Minimal Accents 
+ * Features: Clean Header, Centered Content, Subtle Gradients, Responsive Layout 
+ */ 
+
+/* ======================================= */ 
+/* 1. Global Setup, Variables, and Reset */ 
+/* ======================================= */ 
+
+:root { 
+    /* Color Palette: Modern & Subtle */ 
+    --accent-blue: #0b55c6; /* Primary Accent: Strong Blue for links */ 
+    --accent-dark-text: #333333; /* Darker text for main headings */ 
+    --text-body: #555555;/* Standard body text color */ 
+    --bg-light-blue: #eef3f8;/* Very light blue-gray background */ 
+    --bg-white: #ffffff; /* Pure White for cards */ 
+    --border-light: #e0e0e0; /* Light border color */ 
+    --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.08); /* Soft, subtle shadow */ 
+    --shadow-card-hover: 0 8px 20px rgba(0, 0, 0, 0.12); /* Slightly more prominent on hover (Increased opacity) */
+     
+    /* Layout and Effects */ 
+    --border-radius-card: 12px; 
+    --border-radius-small: 8px; /* Enhanced: Slightly increased for softer buttons */
+} 
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; 
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+    margin: 0; 
+    padding: 0; 
+    /* OPTIMIZATION: Removed unnecessary transitions from universal selector */
+} 
+
+/* OPTIMIZATION: Apply transitions only where necessary */
+a, button, .box, header, nav a {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+body { 
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.6; 
+    color: var(--text-body); 
+    background-color: var(--bg-light-blue); 
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 2rem 1rem; 
+} 
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+main { 
+    flex-grow: 1; 
+    max-width: 1200px;
+    width: 100%; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+} 
+
+/* Links (General) */ 
+a { 
+    color: var(--accent-blue); 
+    text-decoration: none; 
+    font-weight: 500; 
+} 
+
+a:hover { 
+    color: var(--accent-blue); 
+    text-decoration: underline; 
+} 
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: var(--border-radius-small);
+}
+
+
+/* ======================================= */ 
+/* 2. Typography & Headings (Modern Minimal) */ 
+/* ======================================= */ 
+
+h1 { 
+    font-size: 3rem; 
+    font-weight: 800; 
+    color: var(--accent-dark-text); 
+    letter-spacing: -0.04em; 
+    margin-bottom: 0.5rem; 
+} 
+
+h2 { 
+    font-size: 1.25rem; 
+    color: var(--text-body); 
+    font-weight: 400; 
+    margin-bottom: 2.5rem; 
+    text-align: center; 
+    position: relative;
+    padding-bottom: 0.5rem;
+} 
+
+/* Subtitle Design Flair (for H2) */
+h2::after {
+    content: '';
+    display: block;
+    width: 50px; 
+    height: 3px;
+    background-color: var(--accent-blue);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+
+h3 { 
+    font-size: 1.6rem; 
+    color: var(--accent-dark-text); 
+    font-weight: 700; 
+    margin-bottom: 0.5rem; 
+} 
+
+/* ======================================= */ 
+/* 3. Header & Navigation (FIXED: Centered Header, Navigation Below) */ 
+/* ======================================= */ 
+
+/* ------------------------------------------- */ 
+/* --- A. Default Navigation Styling (For all content pages) --- */ 
+/* ------------------------------------------- */ 
+
+/* Header Container (Applies to ALL Content Pages) */ 
+header {
+    background-color: var(--bg-white);
+    padding: 1.5rem 2rem;
+    border-radius: var(--border-radius-card);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-light);
+    width: 100%;
+    max-width: 1200px; 
+    
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+}
+
+/* Nav Links List Container (The list of pages) */
+nav ul {
+    list-style: none;
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem; /* ENHANCEMENT: Slightly increased gap for better separation */
+    padding: 1rem 0 0;
+    width: 100%;
+    justify-content: center; 
+}
+
+/* Nav Links - Aesthetic Styling (Small buttons for pages) */
+nav a {
+    display: block !important; 
+    text-align: center; 
+    padding: 0.8rem 1.4rem; /* ENHANCEMENT: Increased padding for a larger button area */
+    border-radius: var(--border-radius-small); /* Uses 8px radius */
+    white-space: nowrap;
+
+    color: var(--accent-blue);
+    border: 1px solid var(--border-light); /* ENHANCEMENT: Softer border color */
+    background-color: var(--bg-white);
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* ENHANCEMENT: Lighter shadow on buttons */
+}
+
+nav a:hover {
+    background-color: var(--accent-blue); 
+    color: var(--bg-white);
+    border-color: var(--accent-blue); /* Bring back blue border on hover */
+    text-decoration: none;
+    transform: translateY(-1px); /* ENHANCEMENT: Softer lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow on hover */
+}
+
+/* Desktop Header Layout for Content Pages */
+@media (min-width: 768px) {
+    header {
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav ul {
+        gap: 1.5rem; /* ENHANCEMENT: More spacing on desktop */
+        padding: 0;
+        justify-content: center; 
+    }
+}
+
+
+/* ------------------------------------------- */ 
+/* --- B. Welcome Page Overrides (Hiding Nav and Centering) --- */ 
+/* ------------------------------------------- */ 
+
+body.welcome-page {
+    justify-content: center; 
+}
+
+body.welcome-page main {
+    justify-content: center;
+}
+
+body.welcome-page header {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 4rem;
+    max-width: 900px; 
+    display: block; 
+    text-align: center;
+}
+
+body.welcome-page nav {
+    display: none;
+}
+
+body.welcome-page h1, 
+body.welcome-page h2 {
+    text-align: center;
+}
+
+/* ======================================= */ 
+/* 4. Content Cards (Welcome Page Specific - Simplified) */ 
+/* ======================================= */ 
+
+article section { 
+    background-color: transparent; 
+    padding: 0; 
+    margin-bottom: 0; 
+    border-radius: 0; 
+    box-shadow: none; 
+    border-left: none; 
+} 
+
+article section:hover { 
+    transform: none; 
+    box-shadow: none; 
+    border-left-color: transparent; 
+} 
+
+.section-container { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 0; 
+    padding: 0; 
+    max-width: 900px; 
+    margin: 0 auto; 
+    border-radius: var(--border-radius-card); 
+    overflow: hidden; 
+    box-shadow: var(--shadow-subtle); 
+} 
+
+.box { 
+    background-color: var(--bg-white); 
+    padding: 2.0rem 1.5rem; 
+    border-radius: 0; 
+    box-shadow: none; 
+    height: 100%; 
+    border: none; 
+     
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;  
+     
+    position: relative; 
+} 
+
+.box:first-child { 
+    border-right: 1px solid var(--border-light); 
+} 
+
+.box:hover { 
+    box-shadow: var(--shadow-card-hover); 
+    z-index: 1; 
+    transform: translateY(-2px); 
+} 
+
+
+/* Desktop Layout (Perfect Side-by-Side) */ 
+@media (min-width: 768px) { 
+    .section-container { 
+        flex-direction: row; 
+        gap: 0; 
+        align-items: stretch; 
+    } 
+
+    .section-container section { 
+        flex: 1; 
+    } 
+
+    .box { 
+        padding: 2rem 2rem; 
+    } 
+} 
+
+/* ======================================= */ 
+/* 5. MAGIC BUTTONS & DRAMATIC CLICK EFFECT (Removed from this design) */ 
+/* ======================================= */ 
+
+.box ul { 
+    display: none; 
+} 
+
+/* ======================================= */ 
+/* 6. Footer (Clean and Subtle) - REFACTORED */ 
+/* ======================================= */ 
+
+footer {
+    /* Refactored to match Header container styling for consistency */
+    background-color: var(--bg-white);
+    padding: 1.5rem 2rem;
+    border-radius: var(--border-radius-card);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    border: 1px solid var(--border-light);
+    width: 100%;
+    max-width: 1200px; 
+    
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    font-size: 0.9rem; /* Added original font size */
+    color: #6c757d; /* Added original text color */
+}
+
+/* Footer Nav Links List Container - REUSED & REFINED NAV STYLES */
+footer nav ul {
+    list-style: none;
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem; /* Consistent spacing */
+    padding: 1rem 0 0;
+    width: 100%;
+    justify-content: center; 
+}
+
+/* Footer Nav Links - REUSED & REFINED BUTTON STYLES */
+footer nav a {
+    display: block !important; 
+    text-align: center; 
+    padding: 0.8rem 1.4rem; 
+    border-radius: var(--border-radius-small);
+    white-space: nowrap;
+
+    color: var(--accent-blue);
+    border: 1px solid var(--border-light); 
+    background-color: var(--bg-white);
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+}
+
+footer nav a:hover {
+    background-color: var(--accent-blue); 
+    color: var(--bg-white);
+    border-color: var(--accent-blue);
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ======================================= */ 
+/* 7. Welcome Page Specific Styles (MIMIC NEW PHOTO) */ 
+/* ======================================= */ 
+
+/* ... (No changes here, already optimized) ... */ 
+
+.icon-placeholder { 
+    margin-bottom: 2rem; 
+    height: 90px; 
+} 
+
+.icon { 
+    width: 90px; 
+    height: 90px; 
+    border-radius: 50%; 
+} 
+ 
+.html-box .icon { 
+    background-color: #d1c4e9; 
+} 
+.css-box .icon { 
+    background-color: #f8bbd0; 
+} 
+
+.box-title { 
+    font-size: 1.6rem; 
+    color: var(--accent-dark-text); 
+    font-weight: 700; 
+    margin-bottom: 0.5rem; 
+} 
+
+.box-subtitle { 
+    font-size: 1.1rem; 
+    color: var(--text-body); 
+    margin-bottom: 1.5rem; 
+    position: relative;
+    padding-bottom: 0.5rem;
+} 
+
+.box-subtitle::after {
+    content: '';
+    display: block;
+    width: 30px; 
+    height: 2px;
+    background-color: #e0e0e0; 
+    margin: 0.5rem auto 0;
+    border-radius: 1px;
+}
+
+.box-description { 
+    color: var(--text-body); 
+    font-size: 1rem; 
+    margin-bottom: 2.5rem; 
+    flex-grow: 1; 
+    padding: 0 1rem;  
+} 
+
+.button-wrapper { 
+    margin-top: auto; 
+    padding-top: 0; 
+    border-top: none; 
+} 
+
+.action-link { 
+    display: inline-block; 
+    font-weight: 600; 
+    font-size: 1.1rem; 
+    color: var(--accent-blue);  
+    text-decoration: none; 
+    padding: 0.5rem 0; 
+    background: transparent; 
+    border: none; 
+    box-shadow: none; 
+} 
+
+.action-link:hover { 
+    color: var(--accent-blue); 
+    text-decoration: underline; 
+    transform: none; 
+    box-shadow: none; 
+} 
+
+@media (max-width: 767px) { 
+    .box:first-child { 
+        border-bottom: 1px solid var(--border-light); 
+        border-right: none; 
+    } 
+}
+/* --------------------------
+   CV page layout (cv.html)
+   -------------------------- */
+.cv-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+  background: transparent;
+}
+
+.cv-side {
+  background: var(--bg-white);
+  border-radius: var(--border-radius-card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-subtle);
+  text-align: left;
+}
+.cv-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.contact-card h3,
+.languages-card h3,
+.volunteer-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-dark-text);
+}
+.cv-main {
+  background: var(--bg-white);
+  border-radius: var(--border-radius-card);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-subtle);
+}
+.cv-header .personal-profile-title {
+  margin-top: 0.25rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.cv-section { margin-top: 1.25rem; }
+.education-item { display:flex; justify-content:space-between; gap:1rem; margin-bottom:0.75rem; }
+.edu-left { max-width: 70%; }
+.edu-right { color:#8a8a8a; white-space:nowrap; }
+
+/* Experience */
+.experience-item { margin-bottom: 1rem; }
+.experience-item h4 { margin-bottom: .25rem; }
+
+/* Skills */
+.skills-list { display:flex; flex-wrap:wrap; gap:0.5rem 1rem; list-style:none; padding-left:0; }
+.skills-list li { background:#f6f6f6; padding:0.4rem 0.7rem; border-radius:6px; font-size:0.95rem; }
+
+/* CV actions */
+.cv-actions { margin-top:1.5rem; }
+.cv-actions .button { display:inline-block; background:var(--accent-blue); color: #fff; padding:0.5rem 0.9rem; border-radius:8px; text-decoration:none; }
+
+/* --------------------------
+   Schedule page styles
+   -------------------------- */
+.schedule-wrapper { max-width:1100px; margin:0 auto; padding:1.5rem; }
+
+/* Grid container */
+.schedule-grid { display:block; width:100%; border-radius:8px; overflow:hidden; }
+
+/* Header row */
+.grid-header, .grid-row { display:grid; grid-template-columns: 140px repeat(5, 1fr); align-items:stretch; }
+.header-cell { background: #ffffff; padding: 0.6rem; border-bottom:1px solid var(--border-light); text-align:center; font-weight:700; }
+.grid-row .time-col { background:#fafafa; padding:0.6rem; border-right:1px solid var(--border-light); text-align:center; font-weight:600; }
+
+/* Cells */
+.grid-cell { padding:0.5rem; border-right:1px solid var(--border-light); border-bottom:1px solid var(--border-light); min-height:70px; display:flex; align-items:center; justify-content:center; text-align:center; }
+.grid-cell.empty { background: transparent; color: #666; }
+
+/* Course card appearance */
+.course { color:#111; font-weight:700; padding:0.6rem; border-radius:8px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); display:flex; flex-direction:column; gap:6px; }
+
+/* course colors (match your screenshot) */
+.course.g-446 { background: #caa188; color: #1b1b1b; } /* brown/tan */
+.course.g-431 { background: #9fd3ff; color: #062a3a; } /* light blue */
+.course.g-428 { background: #ffb3d1; color: #2b0a1a; } /* pink */
+.course.g-321 { background: #bfe6b6; color: #123018; } /* green */
+.course.g-350 { background: #caa6ff; color: #24103f; } /* purple */
+.course.g-270 { background: #e5b77b; color: #2b1b10; } /* yellow/orange */
+
+/* smaller course name detail */
+.course-name { display:block; font-weight:500; font-size:0.95rem; }
+
+/* responsive: stack columns on small screens */
+@media (max-width: 767px) {
+  .cv-container { grid-template-columns: 1fr; padding:1rem; }
+  .grid-header, .grid-row { grid-template-columns: 110px repeat(5, 1fr); }
+  .grid-cell { min-height:60px; padding:0.4rem; }
+  .header-cell { font-size:0.95rem; padding:0.5rem; }
+}
+
+/* accessibility: focus states */
+a:focus, button:focus, .course:focus { outline:3px solid rgba(11,85,198,0.15); outline-offset:3px; }
+
+/* ================================
+   General Layout & Theme
+================================ */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}
+
+nav {
+  background: #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #004aad;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* ================================
+   CV Entry Page
+================================ */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input, form textarea, form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form textarea {
+  grid-column: span 2;
+  resize: vertical;
+}
+
+form button {
+  grid-column: span 2;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #003580;
+}
+
+/* CV Preview Styling */
+#cv-preview {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+#cv-preview h2 {
+  color: #004aad;
+  border-bottom: 2px solid #004aad;
+  padding-bottom: 5px;
+  margin-top: 1rem;
+}
+
+/* ================================
+   Events Catalog Page
+================================ */
+.events-controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.events-controls input,
+.events-controls select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #004aad;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* ================================
+   Footer / Disclaimer
+================================ */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  background-color: #eee;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+}
+
+/* ================================
+   Responsive Design
+================================ */
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .events-controls {
+    flex-direction: column;
+  }
+}

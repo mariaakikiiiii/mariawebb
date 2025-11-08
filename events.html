@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Events Catalog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Web Events Catalog</h1>
+    <nav>
+      <a href="home.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="events-page">
+    <section class="search-section">
+      <label for="search">🔍 Search Events:</label>
+      <input type="text" id="search" placeholder="Type event name or description...">
+      
+      <label for="category">Filter by Category:</label>
+      <select id="category">
+        <option value="all">All</option>
+        <option value="Window">Window</option>
+        <option value="Mouse">Mouse</option>
+        <option value="Keyboard">Keyboard</option>
+        <option value="Form">Form</option>
+        <option value="Focus">Focus</option>
+        <option value="DOM">DOM</option>
+        <option value="Media">Media</option>
+      </select>
+    </section>
+
+    <table id="eventsTable" class="events-table">
+      <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Supported Tags</th>
+          <th>W3Schools Link</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>Disclaimer: This site is for educational purposes only. © 2025 Maria Akiki.</p>
+    <p>Last updated: November 2025</p>
+  </footer>
+
+  <script src="../js/events.js"></script>
+</body>
+</html>

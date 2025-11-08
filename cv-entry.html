@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV Entry — Live Preview</title>
+  <meta name="description" content="CV data-entry form with live preview (no backend)."/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>CV Data Entry</h1>
+    <p class="lead">Fill the form</p>
+    <nav aria-label="Main navigation">
+      <ul class="main-nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="cv-entry.html" aria-current="page">CV Entry</a></li>
+        <li><a href="events.html">Events Catalog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="entry-grid" aria-labelledby="entry-heading">
+      <h2 id="entry-heading">Enter your details</h2>
+
+      <form id="cvForm" class="form-panel" novalidate>
+        <fieldset>
+          <legend>Personal</legend>
+          <label for="fullName">Full name <span aria-hidden="true">*</span></label>
+          <input id="fullName" name="fullName" type="text" required placeholder="e.g., Maria Fadi Akiki">
+
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="+961 71 364 432">
+
+          <label for="location">Location</label>
+          <input id="location" name="location" type="text" placeholder="City, Country">
+
+          <label for="profile">Short profile</label>
+          <textarea id="profile" name="profile" rows="3" placeholder="Brief summary about you"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Education</legend>
+          <label for="education">Education (one per line: degree — place — years) <span aria-hidden="true">*</span></label>
+          <textarea id="education" name="education" rows="3" required placeholder="B.Eng — USEK — 2023 — Present"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Experience</legend>
+          <label for="experience">Experience (one per line)</label>
+          <textarea id="experience" name="experience" rows="4" placeholder="Intern — SoftMachines — 2024"></textarea>
+
+          <label for="skills">Skills (comma-separated)</label>
+          <input id="skills" name="skills" placeholder="HTML, CSS, JavaScript, Arduino">
+
+          <label for="projects">Projects / Certifications (one per line)</label>
+          <textarea id="projects" name="projects" rows="3" placeholder="SniffGard — Frontend demo"></textarea>
+
+          <label for="photoUrl">Photo URL (optional)</label>
+<input id="photoUrl" name="photoUrl" type="url" placeholder="https://example.com/your-photo.jpg">
+
+        </fieldset>
+
+        <div class="form-actions">
+          <button id="generateBtn" type="submit">Generate CV</button>
+          <button id="resetBtn" type="button">Reset</button>
+          <small class="hint">Required fields: Full name, Email, Education.</small>
+        </div>
+      </form>
+
+      <aside class="preview-panel" aria-labelledby="preview-heading">
+        <h2 id="preview-heading">Live CV Preview</h2>
+        <div id="cvPreview" class="cv-preview" aria-live="polite">
+          <!-- Preview will be injected by js/cv.js -->
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Last updated: <time datetime="2025-11-07">November 7, 2025</time></p>
+    <p>Disclaimer: This site is for educational purposes.</p>
+    <nav class="footer-nav"><a href="cv.html">CV</a> | <a href="events.html">Events</a></nav>
+  </footer>
+
+  <script src="../js/cv.js" defer></script>
+</body>
+</html>
